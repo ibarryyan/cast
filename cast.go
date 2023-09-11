@@ -109,6 +109,12 @@ func ToString(i interface{}) string {
 	return v
 }
 
+// ToStringPoint casts an interface to a string point type.
+func ToStringPoint(i interface{}) *string {
+	v, _ := ToStringE(i)
+	return &v
+}
+
 // ToStringMapString casts an interface to a map[string]string type.
 func ToStringMapString(i interface{}) map[string]string {
 	v, _ := ToStringMapStringE(i)
